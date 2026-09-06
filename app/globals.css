@@ -1,26 +1,70 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+/* lets `dark:` utilities respond to next-themes toggling a `.dark` class on <html> */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-paper: #F1F3EE;
+  --color-paper-card: #FAFAF5;
+  --color-ink: #122B25;
+  --color-ink-soft: #4B5C55;
+  --color-teal: #1F5D50;
+  --color-teal-dark: #123B33;
+  --color-seal: #BD8A2E;
+  --color-pulse: #A5392A;
+  --color-line: #D7DBD0;
+  --color-line-strong: #B9C0B3;
+  --color-primary: #1F5D50;
+  --color-primary-dark: #123B33;
+
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* next-themes toggles this class on <html> */
+.dark {
+  color-scheme: dark;
+  --color-paper: #0F1A17;
+  --color-paper-card: #16221E;
+  --color-ink: #F1F3EE;
+  --color-ink-soft: #A8B5AE;
+  --color-line: #24312B;
+  --color-line-strong: #364138;
+  --color-primary: #2E7B69;
+  --color-primary-dark: #1F5D50;
+  --color-teal: #2E7B69;
+  --color-teal-dark: #1F5D50;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background: var(--color-paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-paper text-ink font-sans antialiased;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  @apply font-serif font-medium m-0 tracking-[-0.01em];
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
 }
