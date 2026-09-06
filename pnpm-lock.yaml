@@ -47,6 +47,9 @@ importers:
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
+      ucoder-insight:
+        specifier: ^1.1.5
+        version: 1.1.5
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4.3.3
@@ -1984,6 +1987,14 @@ packages:
     engines: {node: '>=16.20.0'}
     hasBin: true
 
+  ucoder-insight@1.1.5:
+    resolution: {integrity: sha512-aj/LsahmQWAb+WpMwE+okVOJnrF8NHQYPVzrqv8dooUSAAW6U4iAXI8sdpAevXim838czd74FKzgr+jVpTKxCA==}
+    peerDependencies:
+      web-vitals: '>=3.0.0 <6.0.0'
+    peerDependenciesMeta:
+      web-vitals:
+        optional: true
+
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
@@ -3837,6 +3848,8 @@ snapshots:
       '@typescript/typescript-sunos-x64': 7.0.2
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
+
+  ucoder-insight@1.1.5: {}
 
   undici-types@8.3.0: {}
 
